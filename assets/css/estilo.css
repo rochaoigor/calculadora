@@ -20,26 +20,55 @@ header {
 header h1 {
     text-align:center;
     color:white;
-    text-shadow:1px 2px black;
+    text-shadow:2px 2px crimson;
 }
 
 div#principal {
     background-color:gray;
-    width: 350px;
-    height: 400px;
+    width: 400px;
+    height: 600px;
     margin:auto;
-    
+    margin-bottom:50px;
+    box-shadow:4px 2px 4px 2px rgba(0, 0, 0, 0.67);
+    background-image:url('/img/onepiece.jpg');
+    border-radius:20px;
+   
     
 }
-
-#visor {
+div#calculadora {
+    position:relative;
+    top:-20px;
     padding:10px;
+    margin-bottom:10px;
+}
+#visor {
+    padding:18px;
     width:300px;
-    margin-top:20px;
-    margin-left:10px;
+    font-weight:bold;
+    font-size:1.5rem;
+    margin-top:50px;
+    margin-left:19px;
+    margin-bottom:50px;
+    background-color:rgba(127, 255, 212, 0.762);
+    border:none;
+    box-shadow:inset 2px 4px 2px 4px rgba(0, 0, 0, 0.538);
     }
 
     div.botao input {
+        font-weight:bold;
+        font-size:1.1rem;
+        width:60px;
         padding:20px;
-        
+        padding-right:20px;
+        padding-left:20px;
+        margin-left:25px;
+        margin-bottom:20px;
+        margin-top:27px;
+        border-radius:3px;
+        text-align:center;
+    }
+
+    div.botao input:hover {
+        background-color:rgba(127, 255, 212, 0.778);
+        border:1px solid crimson;
     }

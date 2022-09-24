@@ -1,48 +1,57 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet"  href="assets/css/estilo.css">
+    <link rel="stylesheet" href="assets/css/estilo.css">
     <title>Calculadora One Piece</title>
 </head>
+
 <body>
     <header>
         <h1>Calculadora</h1>
     </header>
 
-    <form id="calc">
-        <div id="principal">
+
+
+    <div id="principal">
+
+
         <div id="calculadora">
-        <input type="text" name="visor" id="visor">
-        <div class="botao">
-        <input type="button" value="9" id="inove" name="nove" onclick="calcNove()">
-        <input type="button" value="8" id="ioito" name="oito" onclick="calcOito()">
-        <input type="button" value="7" id="isete" name="sete">
-        <input type="button" value="/" id="idiv" name="div">
-        </div>
-        <div class="botao">
-            <input type="button" value="4" name="quatro" id="iquatro">
-            <input type="button" value="5" name="cinco" id="icinco">
-            <input type="button" value="6" name="seis" id="iseis">
-            <input type='button' value="*" name="multi" id="iMulti">
-        </div>
-        <div class="botao">
-            <input type="button" value="1" name="um" id="ium">
-            <input type="button" value="2" name="dois" id="idois">
-            <input type="button" value="3" name="tres" id="itres">
-            <input type="button" value="-" name="sub" id="iSub">  
-        </div>
-        <div class="botao">
-            <input type="button" value="0" name="zero" id="izero">
-            <input type="button" value="CE" name="ce" id="ice">
-            <input type="button" value="=" name="igual" id="iIgual">
-            <input type="button" value="+" name="soma" id="iSoma">
-        </div>
+            <form id="calc">
+
+                <input type="text" name="visor" id="visor">
+<hr>
+                <div class="botao">
+                    <input type="button" value="9" id="inove" name="nove" onclick="calcNove()">
+                    <input type="button" value="8" id="ioito" name="oito" onclick="calcOito()">
+                    <input type="button" value="7" id="isete" name="sete" onclick="calcSete()">
+                    <input type="button" value="/" id="idiv" name="div" onclick="calcDiv()">
+                </div>
+                <div class="botao">
+                    <input type="button" value="4" name="quatro" id="iquatro" onclick="calcQuatro()">
+                    <input type="button" value="5" name="cinco" id="icinco" onclick="calcCinco()">
+                    <input type="button" value="6" name="seis" id="iseis" onclick="calcSeis()">
+                    <input type='button' value="*" name="multi" id="iMulti" onclick="calcMulti()">
+                </div>
+                <div class="botao">
+                    <input type="button" value="1" name="um" id="ium" onclick="calcUm()">
+                    <input type="button" value="2" name="dois" id="idois" onclick="calcDois()">
+                    <input type="button" value="3" name="tres" id="itres" onclick="calcTres()">
+                    <input type="button" value="-" name="sub" id="iSub" onclick="calcSub()">
+                </div>
+                <div class="botao">
+                    <input type="button" value="0" name="zero" id="izero"onclick="calcZero()">
+                    <input type="button" value="CE" name="ce" id="ice" onclick="calcCe()">
+                    <input type="button" value="=" name="igual" id="iIgual" onclick="calcIgual()">
+                    <input type="button" value="+" name="soma" id="iSoma" onclick="calcSoma()">
+                </div>
 
         </div>
     </div>
     </form>
 </body>
+
 </html>
