@@ -1,71 +1,54 @@
-valor = '';
-function calcSete() {
-    valor = valor + calc.isete.value
-    calc.visor.value  = valor;
-}function calcOito() {
-    valor = valor + calc.ioito.value
-    calc.visor.value = valor;
-}function calcNove() {
-    valor = valor + calc.inove.value
-    calc.visor.value = valor;
-}function calcQuatro() {
-    valor = valor + calc.iquatro.value
-    calc.visor.value = valor;
-}function calcCinco() {
-    valor = valor + calc.icinco.value
-    calc.visor.value=valor;
-}function calcSeis() {
-    valor = valor + calc.iseis.value
-    calc.visor.value=valor;
-}function calcUm () {
-    valor = valor + calc.ium.value
-    calc.visor.value=valor;
-}function calcDois() {
-    valor = valor + calc.idois.value
-    calc.visor.value=valor;
-}function calcTres() {
-    valor = valor + calc.itres.value
-    calc.visor.value=valor;
-}function calcZero () {
-    valor = valor + calc.izero.value
-    calc.visor.value=valor;
-}function calcDiv () {
-    valor1 = valor;
-    oper = 1
-    valor = '';
-}function calcSoma() {
-    valor1 = valor;
-    oper = 2
-    valor = '';
-}function calcMulti () {
-    valor1 = valor;
-    oper = 3
-    valor = '';
-}function calcSub() {
-    valor1 = valor;
-    oper = 4
-    valor = '';
-}function calcCe () {
-    calc.visor.value = '';
-    valor = '';
-}
-function calcigual() {
-    valor2 = valor;
-    if (oper == 1) {
-    resultado = parseFloat(valor1) / parseFloat (valor2)
-    calc.visor.value = resultado;
-}
-else if (oper == 2) {
-    resultado = parseFloat(valor1) + parseFloat(valor2)
-    calc.visor.value = resultado;
-}else if (oper == 3) {
-    resultado = parseFloat(valor1) * parseFloat(valor2)
-    calc.visor.value = resultado;
-}else if (oper == 4) {
-    resultado = parseFloat(valor1) - parseFloat(valor2)
-    calc.visor.value = resultado;
-}
-valor = resultado;
+function Calculadora() {
 
-}
+    this.inicia = () => {
+        this.capturacliques()
+        this.capturaEnter();
+    }
 
+    this.display = document.querySelector('.display')
+    this.capturaEnter = () => {
+        document.addEventListener('keypress', e => {
+            if (e.key === 13) return;
+            this.addEqDisplay();
+        })
+    }
+
+    this.capturacliques = () => {
+        document.addEventListener('click', e => {
+            const el = e.target;
+            if (el.classList.contains('botao-num')) this.addNumDisplay(el);
+            if (el.classList.contains('botao-del')) this.adddelDisplay();
+            if (el.classList.contains('botao-clear')) this.addClearDisplay();
+            if (el.classList.contains('botao-eq')) this.addEqDisplay();
+        });
+
+    };
+
+    this.adddelDisplay = () => this.display.value = this.display.value.slice(0, -1)
+
+    this.addClearDisplay = () => this.display.value = '';
+
+    this.addNumDisplay = el => {
+        this.display.value += el.innerText;
+        this.display.focus();
+    }
+    
+    this.addEqDisplay = () => {
+        try {
+
+            const conta = eval(this.display.value);
+
+            if (conta === '' || Number.isNaN(conta) || typeof conta !== 'number') {
+                alert('Conta inválida');
+                return;
+            }
+            this.display.value = conta;
+        }
+        catch (error) {
+            alert('Conta inválida')
+        }
+
+    }
+};
+const calc = new Calculadora();
+calc.inicia();
