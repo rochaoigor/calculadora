@@ -1,104 +1,51 @@
-:root {
-    --fonte01: 'Roboto Condensed', sans-serif;
-    --fonte02: 'Montserrat', sans-serif;
-    --fonte03: 'Oranienbaum', serif;
-}
-
-
-@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@400;700&display=swap');
-
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&display=swap');
-
-@import url('https://fonts.googleapis.com/css2?family=Oranienbaum&display=swap');
-
 * {
     margin:0;
     padding:0;
-    font-family:Arial, Helvetica, sans-serif;
 }
 
 body {
-    background-image: url('../img/onepiece.jpg');
-    background-size:cover;
-    background-position:center center;
-    background-attachment:fixed;
-    background-repeat:no-repeat;
-}
-
-header {
-    background-color:rgba(127, 255, 212, 0.653);
-    padding:40px;
-    box-shadow:2px 3px 2px 3px rgba(0, 0, 0, 0.678);
-    margin-bottom:90px;
+    background-color:aqua;
     
 }
-
-header h1 {
-    text-align:center;
-    font-size:2.5em;
-    text-transform:uppercase;
-    font-family:var(--fonte03);
-    color:white;
-    text-shadow:2px 2px crimson;
-}
-
-div#principal {
-    background-color:gray;
-    width: 400px;
-    min-width:150px;
-    height: 600px;
-    margin:auto;
-    margin-bottom:50px;
-    box-shadow:4px 3px 4px 3px rgba(0, 0, 0, 0.67);
-    background-image:url('../img/luffy.jpg');
-    background-position:center center;
-    background-size:cover;
-    background-repeat:no-repeat;
-    border-radius:20px;
-   
-    
-}
-div#principal:hover {
-    background-image:url('../img/download.jpg');
-    background-position:center center;
-    background-size:cover;
-    background-repeat:no-repeat;
-}
-div#calculadora {
+main {
     position:relative;
-    top:-20px;
-    padding:10px;
-    margin-bottom:10px;
 }
-#visor {
-    padding:18px;
-    width:300px;
-    font-family:var(--fonte01);
+section {
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform:translate(-50%,30%);
+    width:400px;
+    text-align:center;
+    padding:15px;
+    border-radius:10px;
+    
+    background-color:#fff;
+    font-size:2.5rem;
+}
+
+.calculadora {
+    width:400px;
+}
+
+.display {
+    font-size:1.3em;
+    width:100%;
+    text-align:right;
+}
+
+.botao {
+    width:90px;
+    height:50px;
+    padding:5px;
+    text-align:center;
+    font-size:18px;
     font-weight:bold;
-    font-size:1.5rem;
-    margin-top:50px;
-    margin-left:19px;
-    margin-bottom:50px;
-    background-color:rgba(127, 255, 212, 0.762);
-    border:none;
-    box-shadow:inset 2px 4px 2px 4px rgba(0, 0, 0, 0.538);
-    }
+    border-radius:10px;
+    cursor:pointer;
+    background-color:lightgrey;
+}
 
-    div.botao input {
-        font-weight:bold;
-        font-size:1.1rem;
-        width:60px;
-        padding:20px;
-        padding-right:20px;
-        padding-left:20px;
-        margin-left:25px;
-        margin-bottom:20px;
-        margin-top:27px;
-        border-radius:3px;
-        text-align:center;
-    }
-
-    div.botao input:hover {
-        background-color:rgba(127, 255, 212, 0.778);
-        border:1px solid crimson;
-    }
+.botao:hover {
+    background-color:grey;
+}
